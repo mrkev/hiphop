@@ -54,3 +54,7 @@ class Playlists
                     tracks.push results.rows.item(i)
                     i++
                 success? tracks
+
+    @rename: (name, new_name) ->
+        db.transaction (tx) ->
+            tx.executeSql 'UPDATE playlists SET name = ? WHERE name = ?', [new_name, name]
