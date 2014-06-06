@@ -27,10 +27,15 @@ spinner_cover = null
 PlayNext = (artist, title, success) ->
     $.each __playerTracklist, (i, track) ->
         if track.artist == artist and track.title == title
+            $('#tracklist-container .track-container').removeClass('playing');
             if i < __playerTracklist.length - 1
                 t = __playerTracklist[i+1]
+                $('#tracklist-container .track-container').eq(i+1).addClass('playing');
             else
                 t = __playerTracklist[0]
+                $('#tracklist-container .track-container').eq(0).addClass('playing');
+
+
             PlayTrack(t.artist, t.title, t.cover_url_medium, t.cover_url_large)
 
 
