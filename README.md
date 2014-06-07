@@ -2,6 +2,12 @@
 
 ![screenshot](http://gethiphop.net/images/screenshot_mac.png)
 
+## How does it work?
+
+When searching, the app will use iTunes and Last.fm to display song results (with cover, title, artist). It will then try to find the best match for this song on Youtube and stream the **highest quality audio stream**.
+
+No torrents, completely decentralized.
+
 ## Contribute
 
 Join us on IRC at `#hiphopapp` on freenode ([web access](http://webchat.freenode.net/?channels=hiphopapp)).
