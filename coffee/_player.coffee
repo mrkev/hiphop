@@ -2,10 +2,10 @@ request = require('request')
 ytdl = require('ytdl')
 
 itag_priorities = [ # http://en.wikipedia.org/wiki/YouTube > Comparison of YouTube media encoding options
+    172, # audio only, WebM/Vorbis/192
     171, # audio only, WebM/Vorbis/128
     43, # video, VP8/Vorbis/128 (0.6 mbps total)
     140, # audio only, MP4/AAC/128
-    172, # audio only, WebM/Vorbis/192
     141, # audio only, MP4/AAC/256
 ]
 
