@@ -149,3 +149,8 @@ $('#player-container #progress-bg').on 'click', (e) ->
     percentage = (e.pageX - $(this).offset().left) / $(this).width()
     videojs('video_player').currentTime(percentage * videojs('video_player').duration())
     $('#player-container #progress-current').css({'width': (percentage) * 100 + '%'})
+
+$('#player-container #volume-bg').on 'click', (e) ->
+    percentage = (e.pageX - $(this).offset().left) / $(this).width()
+    videojs('video_player').volume(percentage)
+    $('#player-container #volume-current').css({'width': (percentage) * 100 + '%'})

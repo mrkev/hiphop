@@ -92,6 +92,9 @@
                 text-align: right
 
             #progress-bg-container
+                display: table-cell
+                vertical-align: middle
+
                 #progress-bg, #progress-current
                     border-radius: 3px
 
@@ -103,3 +106,21 @@
                         height: 6px
                         background: linear-gradient(to bottom, #18b0ff 0%, shade(#18b0ff, 30%) 100%)
                         width: 0
+
+            #volume-bg-container
+                display: table-cell
+                vertical-align: middle
+                width: 80px
+                padding-left: 13px
+
+                #volume-bg, #volume-current
+                    border-radius: 3px
+
+                #volume-bg
+                    background: linear-gradient(to top, #282828 0%, #1e1e1e 100%)
+                    cursor: pointer
+
+                    #volume-current
+                        height: 6px
+                        background: linear-gradient(to bottom, #198cff 0%, shade(#198cff, 30%) 100%)
+                        width: 100%
