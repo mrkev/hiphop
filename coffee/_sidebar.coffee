@@ -65,11 +65,12 @@ $ ->
             label: 'Rename ' + $(@).text(),
             click: ->
                 playlist_new_name = prompt("Set a new name", playlist_name)
-                Playlists.rename(playlist_name, playlist_new_name)
-                Playlists.getAll((playlists) ->
-                    populateSidebar(playlists)
+                if playlist_new_name
+                    Playlists.rename(playlist_name, playlist_new_name)
+                    Playlists.getAll((playlists) ->
+                        populateSidebar(playlists)
                     )
-                userTracking.event("Playlist", "Rename", playlist_name).send()
+                    userTracking.event("Playlist", "Rename", playlist_name).send()
             )
         menu.popup e.clientX, e.clientY
         false
