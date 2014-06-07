@@ -1,6 +1,6 @@
 #HipHop [![Dependency Status](https://david-dm.org/hiphopapp/hiphop.svg?theme=shields.io)](https://david-dm.org/hiphopapp/hiphop)
 
-![screenshot](http://gethiphop.net/images/screenshot_mac.png)
+![screenshot](http://gethiphop.net/images/github_screenshot.png)
 
 ## How does it work?
 
