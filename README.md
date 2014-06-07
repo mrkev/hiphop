@@ -1,6 +1,6 @@
 #HipHop [![Dependency Status](https://david-dm.org/hiphopapp/hiphop.svg?theme=shields.io)](https://david-dm.org/hiphopapp/hiphop)
 
-![](http://gethiphop.net/images/screenshot.png)
+![screenshot](http://gethiphop.net/images/screenshot_mac.png)
 
 ## Contribute
 
