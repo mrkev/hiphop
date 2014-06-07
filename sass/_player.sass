@@ -107,11 +107,17 @@
                         background: linear-gradient(to bottom, #18b0ff 0%, shade(#18b0ff, 30%) 100%)
                         width: 0
 
+            #volume-icon
+                display: table-cell
+                vertical-align: middle
+                width: 20px
+                padding-left: 18px
+                +opacity(0.4)
+
             #volume-bg-container
                 display: table-cell
                 vertical-align: middle
                 width: 80px
-                padding-left: 13px
 
                 #volume-bg, #volume-current
                     border-radius: 3px
@@ -121,6 +127,7 @@
                     cursor: pointer
 
                     #volume-current
+                        +opacity(0.75)
                         height: 6px
-                        background: linear-gradient(to bottom, #198cff 0%, shade(#198cff, 30%) 100%)
+                        background: linear-gradient(to bottom, #fff 0%, shade(#fff, 30%) 100%)
                         width: 100%
