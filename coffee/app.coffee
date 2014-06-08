@@ -70,3 +70,23 @@ $ ->
     ), 1
 
     $('#search-input').focus()
+
+    $("#ActionButtonExpand").click(()->
+      if !$(this).hasClass("maximized")
+        $(this).addClass("maximized")
+        win.maximize()
+      else
+        $(this).removeClass("maximized")
+        win.unmaximize()
+    )
+
+    $("#ActionButtonClose").click(()->
+      win.close()
+    )
+
+    $("#ActionButtonMinimize").click(()->
+      win.minimize()
+    )
+
+    true
+
