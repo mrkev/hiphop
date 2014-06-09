@@ -6,11 +6,7 @@
         color: rgba(white, .4)
 
     .track-container
-        overflow: hidden
-        margin: 0 3px 0 3px
-        width: 225px
-        height: 42px
-        float: left
+        margin-bottom: 3px
         padding: 5px
         &:hover
             cursor: pointer
@@ -29,7 +25,6 @@
             border-radius: 2px
             +text-shadow(rgba(black, .8) 0px 1px 1px)
         .info
-            width: calc(100% - 53px)
             float: left
             padding: 4px
             margin-left: 3px
@@ -37,18 +32,10 @@
             .title
                 font-size: 14px
                 color: #ddd
-                white-space: nowrap
-                text-overflow: ellipsis
-                overflow: hidden
-                height: 15px
             .artist
                 font-size: 13px
                 margin-top: 5px
                 color: #999
-                white-space: nowrap
-                overflow: hidden
-                text-overflow: ellipsis
-                height: 14px
 
         &.playingXXX
             background: #18b0ff
