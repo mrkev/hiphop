@@ -32,6 +32,19 @@ module.exports = (grunt) ->
                 files:
                     'css/app.css': 'css/app.css'
 
+        # Note: Watches only app, not website.
+        watch:
+            scripts:
+                files: ['coffee/**/*.coffee']
+                tasks: ['coffee']
+                options:
+                    interrupt: true
+
+            stylesheets:
+                files: ['sass/**/*.sass']
+                tasks: ['compass']
+                options:
+                    interrupt: true
         shell:
             runnw:
                 options:
@@ -108,7 +121,7 @@ module.exports = (grunt) ->
                 src: '**'
 
     
-
+    grunt.loadNpmTasks 'grunt-contrib-watch'
     grunt.loadNpmTasks 'grunt-contrib-clean'
     grunt.loadNpmTasks 'grunt-contrib-coffee'
     grunt.loadNpmTasks 'grunt-contrib-compass'
