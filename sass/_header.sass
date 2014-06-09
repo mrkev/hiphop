@@ -11,9 +11,8 @@
     +box-shadow(rgba(black, .1) 0 2px 5px)
 
     #logo
-        position: fixed
-        top: 7px
-        right: 59px
+        position: relative
+        display: inline-block
         background-image: url(../images/logo@2x.png)
         background-size: 89px 36px
         width: 89px
@@ -22,10 +21,19 @@
     nav
         display: inline-block
 
+    .right
+        text-align: right
+        float: right
+        height: 10px
+        margin-top: -5px
+
+    .left
+        text-align: left
+        float: left
+
     #windowControls
-        position: fixed
-        right: 10px
-        top: 15px
+        display: inline-block
+        padding-bottom: 7px
 
         .actionButton
             -webkit-app-region: no-drag
