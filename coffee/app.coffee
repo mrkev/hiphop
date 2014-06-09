@@ -56,6 +56,12 @@ $ ->
         $('#main #sidebar-container, #tracklist-container').height($(window).height() - ($('#header').outerHeight() + $('#player-container').outerHeight() + 20))
     ).resize()
 
+    if process.platform == 'darwin'
+        console.log 'running on a mac'
+    else  
+        console.log 'something else'
+    
+
     Playlists.getAll((playlists) ->
         populateSidebar(playlists)
         )
