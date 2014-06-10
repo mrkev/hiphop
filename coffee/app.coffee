@@ -48,7 +48,6 @@ spinner_cover_opts =
 
 
 ########################################################
-
 $ ->
     
     # Resize sidebar and tracklist heights when window is being resized
@@ -56,10 +55,11 @@ $ ->
         $('#main #sidebar-container, #tracklist-container').height($(window).height() - ($('#header').outerHeight() + $('#player-container').outerHeight() + 20))
     ).resize()
 
+    # Place window controls
     if process.platform == 'darwin'
-        console.log 'running on a mac'
+        $("#header .left").first().prepend(windowControls(true))
     else  
-        console.log 'something else'
+        $("#header .right").first().append(windowControls(false))
     
 
     Playlists.getAll((playlists) ->
@@ -96,3 +96,52 @@ $ ->
 
     true
 
+
+
+##
+# Builds the window controls to match position/ordering of each platform
+#
+# @param osx: Is system osx?
+# @return a JQuery object representing the window controls.
+windowControls = (osx) ->
+    if !osx
+        # Linux & Win ordering : - + x
+        return winCon = $("<div/>", 
+                id: 'windowControls'
+            ).append(
+                $("<div/>", 
+                    id: 'ActionButtonClose'
+                    class: 'actionButton'
+                )
+            ).append(
+                $("<div/>", 
+                    id: 'ActionButtonExpand'
+                    class: 'actionButton'
+                )
+            ).append(
+                $("<div/>", 
+                    id: 'ActionButtonMinimize'
+                    class: 'actionButton'
+                )
+            )
+
+    # OSX ordering : x - +
+    else 
+        return winCon = $("<div/>", 
+                id: 'windowControls'
+            ).append(
+                $("<div/>", 
+                    id: 'ActionButtonExpand'
+                    class: 'actionButton'
+                )
+            ).append(
+                $("<div/>", 
+                    id: 'ActionButtonMinimize'
+                    class: 'actionButton'
+                )
+            ).append(
+                $("<div/>", 
+                    id: 'ActionButtonClose'
+                    class: 'actionButton'
+                )
+            )
